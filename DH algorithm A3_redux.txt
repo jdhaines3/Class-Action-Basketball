@@ -1,0 +1,81 @@
+Algorithm for Class Madness
+David Haines
+
+Goal: To create a replayable game in which two players (of same skill) take turns shooting a basketball.
+If one player makes the shot while the other misses, the player that missed earns a letter. The game continues
+until one player spells out HORSE.  After the game is complete, the user will have the option to replay a game.
+
+Files:
+	-C++ needs header file for player, a player class file, and a game file.
+	-Java needs a player class and game class.
+	
+Output:
+	-Players will take shots and print the results until one makes it while the other misses.
+		-once this happens, print what letter the player who missed the shot earned.
+	-continue printing like this until one player has the letters for HORSE
+	-print the winner and loser
+	-Ask user if want to replay
+	
+Detailed Overview:
+	Player class:
+		-needs constructor and destructor
+		-needs attributes of name, hit chance, shot, and the Char string for Horse
+			-name will be public and just created when instance called, will be set to NULL
+			-hit chance will take the random number generated from the game class and store it for a method
+				to determine if player makes the shot
+			-the shot attribute will be a string that says "hit" or "missed"
+			-the char string will be 6 chars max, and already store A,H,O,R,S, and E.
+				-A is stored in array[0] as a placeholder. the index pointer starts at 0, when the player gets a letter, it is incremented
+					this way, the first incrememnt will be pointing to H
+				-a pointer will be used as an index to this array
+		
+		-needs a method to determine if hit chance number will make the shot.
+			-if hitchance is between 1 and 50, the player misses the shot.
+				-the shot variable will be changed to "MISSED"
+			-if hitchance between 51 and 100, player hits shot
+				-shot variable changed to "HIT"
+			-else error
+			
+		-needs a method to print the result
+			-uses name and shot variables
+			
+		-needs a method that increments the char array pointer by one if player gets a letter
+		
+		-in C++, needs header file that declares methods and attributes
+		
+	
+	Game class:
+		-needs to import class/header file
+		-needs random import
+		
+		-global variable keepGoing and char array size of 1 for continue while loop
+		
+		-call random seed
+		
+		-start while loop (for replay question at end)
+			-create 2 instances of player class, evrything set to zero/Null
+				-name one instance player 1 and other player 2
+		
+		-start new while loop, while value at ptrIndex of player 1 is <5 AND ptrIndex of player 2 is <5, continue
+			-this while loop constitutes a round of shots
+			
+			-set rand1 and rand2
+			-set p1 hitchance to rand1 and same for p2 (rand2)
+			
+			-both players call make shot method
+			
+			-both players print shot method
+				-make shot and print shot split up in order to make debugging easier
+			
+			-if statement: 
+				-if p1 hits shot but p2 misses: p1 increment ptr function
+				-elif p2 hits shot but p1 misses: p2 increment ptr function
+				-else pass
+				
+			-while loop for continue question
+				-ask user if want to continue
+				if y, exit continue while loop and delete instances
+				if n, exite continue loop and round while loop, as well as delete player instances
+				else print that the input wasn't valid
+				
+		
