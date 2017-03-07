@@ -1,7 +1,7 @@
 /* Honor Pledge: I pledge that I have neither 
  given nor receieved any help on this assignment.
  Class Madness: A3
- C++ Header file
+ C++ Player File
  David Haines */
 
 #include "Player.h"
@@ -16,7 +16,7 @@ Player::Player()
 {
 	//fill score with Horse (and throwaway char at score[0] as starting point)
 	//fill everything else with null or zero values
-	this->score[6] = {'A,', 'H', 'O', 'R', 'S', 'E'};
+	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
 	this->hitChance = 0;
 	
 	this->name = "";
@@ -31,7 +31,7 @@ Player::Player()
 Player::Player(std::string n)
 {
 	//all same null or zero values except name
-	this->score[6] = {'A,', 'H', 'O', 'R', 'S', 'E'};
+	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
 	this->hitChance = 0;
 	
 	this->name = n;
@@ -44,7 +44,7 @@ Player::Player(std::string n)
 //--Deconstructor--//
 Player::~Player()
 {
-	std::cout << "Destroying classes! << std::endl;
+	std::cout << "Destroying classes!" << std::endl;
 }
 
 //--Access Methods--//
@@ -58,6 +58,7 @@ std::string Player::getShot()
 void Player::setShot(std::string s)
 {
 	shot = s;
+	return 0;
 }
 	
 //Getter and setter for hitChance	
@@ -69,6 +70,7 @@ int Player::getHitChance()
 void Player::setHitChance(int rnd)
 {
 	hitChance = rnd;
+	return 0;
 }
 
 //get and set methods for index
@@ -82,6 +84,7 @@ int Player::getIndex()
 void Player::gainLetter()
 {
 	(*ptrIndex) = (*ptrIndex) + 1;
+	return 0;
 }
 		
 		
@@ -95,8 +98,6 @@ void Player::makeShot()
 		shot = "MISSED";
 	} else if ( hitChance >= 51 && hitChance <= 100) {
 		shot = "HIT";
-	} else { //protects from numbers outside range
-		return 1;
 	}
 	
 	return 0;
