@@ -58,7 +58,7 @@ std::string Player::getShot()
 void Player::setShot(std::string s)
 {
 	shot = s;
-	return 0;
+	return;
 }
 	
 //Getter and setter for hitChance	
@@ -70,7 +70,7 @@ int Player::getHitChance()
 void Player::setHitChance(int rnd)
 {
 	hitChance = rnd;
-	return 0;
+	return;
 }
 
 //get and set methods for index
@@ -84,7 +84,7 @@ int Player::getIndex()
 void Player::gainLetter()
 {
 	(*ptrIndex) = (*ptrIndex) + 1;
-	return 0;
+	return;
 }
 		
 		
@@ -100,7 +100,7 @@ void Player::makeShot()
 		shot = "HIT";
 	}
 	
-	return 0;
+	return;
 }
 
 //print outcome method
@@ -108,3 +108,5 @@ void Player::makeShot()
 void Player::printResult()
 {
 	std::cout << name << " " << shot << " the shot!" << std::endl;
+	return;
+}
