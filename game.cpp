@@ -33,7 +33,7 @@ int main()
 		int keepGoing2 = 0;
 		
 		//new while loop for each round; continue until one object's char index = 5
-		while (P1->getIndex() <= 5 && P2->getIndex() <= 5) {
+		while (P1->getIndex() < 5 && P2->getIndex() < 5) {
 			
 			//declare variables for while loop: 2 variables to store random numbers for hitChance
 			int randP1 = rand() % 100 + 1;
