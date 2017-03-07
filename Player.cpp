@@ -22,9 +22,8 @@ Player::Player()
 	this->name = "";
 	this->shot = "";
 	
-	//set ptrIndex to address of index (and value of zero)
+	//index set to zero
 	this->index = 0;
-	this->ptrIndex = &index;
 }
 
 //Constructor
@@ -38,7 +37,6 @@ Player::Player(std::string n)
 	this->shot = "";
 	
 	this->index = 0;
-	this->ptrIndex = &index;
 }
 
 //--Deconstructor--//
@@ -83,7 +81,8 @@ int Player::getIndex()
 //so takes no arguments
 void Player::gainLetter()
 {
-	(*ptrIndex) = (*ptrIndex) + 1;
+	index = index + 1;
+	
 	return;
 }
 
@@ -114,5 +113,7 @@ void Player::makeShot()
 void Player::printResult()
 {
 	std::cout << name << " " << shot << " the shot!" << std::endl;
+	//test for getindex
+	std::cout << index << std::endl;
 	return;
 }

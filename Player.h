@@ -23,11 +23,8 @@ class Player
 		int hitChance;
 		std::string name;
 		std::string shot;
-		
-		/*A pointer will be used to call the index of the char array when gaining another letter;
-		will point to an int variable for index*/
+		//index will be used to call score[index] char
 		int index;
-		int* ptrIndex;
 		
 	//--Public Methods, Constructors, Access Methods, Deconstructors--//
 	public:
@@ -56,7 +53,7 @@ class Player
 		void gainLetter();
 		
 		//uses to find which char the index is pointing to
-		char getChar(int index);
+		char getChar(int i);
 		
 		//--Member Methods--//
 		//determines if player hits or misses shot, sets shot
