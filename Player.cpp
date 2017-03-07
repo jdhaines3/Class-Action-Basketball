@@ -16,7 +16,7 @@ Player::Player()
 {
 	//fill score with Horse (and throwaway char at score[0] as starting point)
 	//fill everything else with null or zero values
-	this->score;//[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
+	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
 	this->hitChance = 0;
 	
 	this->name = "";
@@ -30,7 +30,7 @@ Player::Player()
 Player::Player(std::string n)
 {
 	//all same null or zero values except name
-	this->score;//[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
+	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
 	this->hitChance = 0;
 	
 	this->name = n;
@@ -114,6 +114,6 @@ void Player::printResult()
 {
 	std::cout << name << " " << shot << " the shot!" << std::endl;
 	//test for getindex
-	std::cout << index << std::endl;
+	//std::cout << index << std::endl;
 	return;
 }
