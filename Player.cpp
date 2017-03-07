@@ -16,7 +16,7 @@ Player::Player()
 {
 	//fill score with Horse (and throwaway char at score[0] as starting point)
 	//fill everything else with null or zero values
-	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
+	this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E');
 	this->hitChance = 0;
 	
 	this->name = "";
@@ -31,7 +31,7 @@ Player::Player()
 Player::Player(std::string n)
 {
 	//all same null or zero values except name
-	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
+	this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E');
 	this->hitChance = 0;
 	
 	this->name = n;
@@ -86,7 +86,8 @@ void Player::gainLetter()
 	(*ptrIndex) = (*ptrIndex) + 1;
 	return;
 }
-		
+
+//NEED GET CHAR ACCESSOR IN ORDER TO get the char to which the index is pointing
 		
 //--Member Methods--//
 

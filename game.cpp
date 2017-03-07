@@ -1,7 +1,7 @@
 /* Honor Pledge: I pledge that I have neither 
  given nor receieved any help on this assignment.
  Class Madness: A3
- C++ Header file
+C++ game file
  David Haines */
 
 //--includes--//
@@ -12,7 +12,7 @@
 #include <ctime>
 
 //--Game main function--//
-void main()
+int main()
 {
 	//declare variable needed for game while loop to continue
 	int keepGoing = 0;
@@ -32,7 +32,7 @@ void main()
 		int keepGoing2 = 0;
 		
 		//new while loop for each round; continue until one object's char index = 5
-		while (P1->getIndex != 5 || P2->getIndex != 5) {
+		while (P1->getIndex() != 5 || P2->getIndex() != 5) {
 			
 			//declare variables for while loop: 2 variables to store random numbers for hitChance
 			int randP1 = rand() % 100 + 1;
@@ -54,18 +54,18 @@ void main()
 			if (P1->getShot() == "HIT" && P2->getShot() == "MISSED") {
 				P2->gainLetter();
 				//print the letter they just got
-				std::cout << "Player 2 gained an " << P2->getChar(P2->getIndex) << "!" << std::endl;
+				std::cout << "Player 2 gained an " << P2->getChar(P2->getIndex()) << "!" << std::endl;
 			} else if (P1->getShot() == "MISSED" && P2->getShot() == "HIT") {
 				P1->gainLetter();
-				std::cout << "Player 1 gained an " << P1->getChar(P1->getIndex) << "!" << std::endl;
+				std::cout << "Player 1 gained an " << P1->getChar(P1->getIndex()) << "!" << std::endl;
 			}
 		}
 		
 		
 		//print out who won
-		if (P1->getIndex = 5) {
+		if (P1->getIndex() == 5) {
 			std::cout << "Player 1 has HORSE. Player 2 has won the game!" << std::endl;
-		} else if (P2->getIndex = 5) {
+		} else if (P2->getIndex() == 5) {
 			std::cout << "Player 2 has HORSE. Player 1 has won the game!" << std::endl;
 		}
 		
