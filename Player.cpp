@@ -7,16 +7,18 @@
 #include "Player.h"
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 //--Constructors--//
 //every constructor, deconstructor, access, or member method must have namespace of Player
 
 //default constructor
 Player::Player()
+: score {'A', 'H', 'O', 'R', 'S', 'E'}
 {
 	//fill score with Horse (and throwaway char at score[0] as starting point)
 	//fill everything else with null or zero values
-	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
+	//this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E');
 	this->hitChance = 0;
 	
 	this->name = "";
@@ -28,9 +30,10 @@ Player::Player()
 
 //Constructor
 Player::Player(std::string n)
+: score {'A', 'H', 'O', 'R', 'S', 'E'}
 {
 	//all same null or zero values except name
-	this->score[6] = {'A', 'H', 'O', 'R', 'S', 'E'};
+	//this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E');
 	this->hitChance = 0;
 	
 	this->name = n;

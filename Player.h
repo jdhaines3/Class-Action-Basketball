@@ -19,7 +19,7 @@ class Player
 	
 		/*player will have name, a %to hit chance, a char array for HORSE, 
 		and a variable to keep track of if they made a basket*/
-		static char score[6];
+		char score[6];
 		int hitChance;
 		std::string name;
 		std::string shot;
