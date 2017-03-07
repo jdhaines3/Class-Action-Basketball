@@ -53,8 +53,10 @@ class Player
 		
 		//will get value at pointer, set will increment ptr by one
 		int getIndex();
-		void setIndex();
+		void gainLetter();
 		
+		//uses to find which char the index is pointing to
+		char getChar(int index);
 		
 		//--Member Methods--//
 		//determines if player hits or misses shot, sets shot

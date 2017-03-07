@@ -10,6 +10,7 @@ C++ game file
 #include <iostream>
 #include <string>
 #include <ctime>
+#include <stdlib.h>
 
 //--Game main function--//
 int main()
@@ -18,7 +19,7 @@ int main()
 	int keepGoing = 0;
 	
 	//create seed for random # gen
-	srand (time(NULL));
+	srand(time(NULL));
 	
 	//game while loop -- for if user wants to play another game at end
 	while (keepGoing == 0) {
@@ -74,7 +75,7 @@ int main()
 		while (keepGoing2 == 0) {
 			//ask user if they want to play again and get input
 			std::cout << "Do you wish to play again? (Y|N)" << std::endl;
-			std::cin >> cont >> std::endl;
+			std::cin >> cont;
 			
 			//if loop to determine what to do from how user answers
 			//if yes, exit question loop and restart game loop, clear instances

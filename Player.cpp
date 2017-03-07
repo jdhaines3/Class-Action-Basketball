@@ -88,6 +88,11 @@ void Player::gainLetter()
 }
 
 //NEED GET CHAR ACCESSOR IN ORDER TO get the char to which the index is pointing
+char Player::getChar(int i)
+{
+	return score[i];
+}
+
 		
 //--Member Methods--//
 
