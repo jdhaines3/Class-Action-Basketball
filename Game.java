@@ -32,7 +32,7 @@ public class Game
 			Player p2 = new Player("Player 2");
 		
 			//declare variables for the continue question while loop at end.
-			String cont = "";
+			String cont;
 			int keepGoing2 = 0;
 		
 			//call Scanner class to use input in continue while loop
@@ -99,14 +99,15 @@ public class Game
 				//ask user if they want to play again and get input
 				System.out.println("Do you wish to play again? (Y|N)");
 				cont = input.next();
-			
+
 				//if loop to determine what to do from how user answers
-				//if yes, exit question loop and restart game loop, clear instances
-				if (cont == "Y") 
+				
+				//if yes, exit question loop and restart game loop
+				if (cont.equals("Y")) // can't use normal boolean for java strings
 				{
 					keepGoing2 = 1;
 				} //if no, exit question loop and game loop, as well as clear instances
-				else if (cont == "N") 
+				else if (cont.equals("N"))   
 				{
 					keepGoing2 = 1;
 					keepGoing = 1;
