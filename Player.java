@@ -5,7 +5,7 @@
 * David Haines */
 
 //imports: just standard io lib
-import java.io * 
+import java.io.*; 
 
 //--Start Player class--//
 public class Player
@@ -84,7 +84,7 @@ public class Player
 	}
 	
 	//need get char to get the letter to which index is pointing
-	char getChar(i)
+	char getChar(int i)
 	{
 		return score[i];
 	}
