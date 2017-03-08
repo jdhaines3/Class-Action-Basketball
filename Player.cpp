@@ -14,11 +14,18 @@
 
 //default constructor
 Player::Player()
-: score {'A', 'H', 'O', 'R', 'S', 'E'}
+//: score {'A', 'H', 'O', 'R', 'S', 'E'} GIVES WARNING
 {
 	//fill score with Horse (and throwaway char at score[0] as starting point)
 	//fill everything else with null or zero values
-	//this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E');
+	
+	//this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E');  GIVES WARNING
+	score[0] = 'A';
+	score[1] = 'H';
+	score[2] = 'O';
+	score[3] = 'R';
+	score[4] = 'S';
+	score[5] = 'E';
 	this->hitChance = 0;
 	
 	this->name = "";
@@ -30,10 +37,17 @@ Player::Player()
 
 //Constructor
 Player::Player(std::string n)
-: score {'A', 'H', 'O', 'R', 'S', 'E'}
+//: score {'A', 'H', 'O', 'R', 'S', 'E'} GIVES WARNING
 {
 	//all same null or zero values except name
-	//this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E');
+	//this->score[6] = ('A', 'H', 'O', 'R', 'S', 'E'); GIVES WARNING
+	score[0] = 'A';
+	score[1] = 'H';
+	score[2] = 'O';
+	score[3] = 'R';
+	score[4] = 'S';
+	score[5] = 'E';
+	
 	this->hitChance = 0;
 	
 	this->name = n;

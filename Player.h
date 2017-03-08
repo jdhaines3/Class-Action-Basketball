@@ -14,6 +14,7 @@
 //--Header file for Player class--//
 class Player
 {
+	
 	//--Private member variables--//
 	private:
 	
@@ -26,6 +27,7 @@ class Player
 		//index will be used to call score[index] char
 		int index;
 		
+		
 	//--Public Methods, Constructors, Access Methods, Deconstructors--//
 	public:
 		
@@ -33,11 +35,13 @@ class Player
 		Player();
 		Player(std::string name);  //initialize player with a name to avoid access method
 		
+		
 		//--Destructors--//
 		~Player();
 		
 		
 		//--Access Methods--//
+		
 		//need getters and setters to access private variables
 		
 		/*set shot and get hitChance won't be used by game file, but included because their opposite
